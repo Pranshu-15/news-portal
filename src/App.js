@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Body from './Components/Body';
+import ArticleDetail from './Components/ArticleDetail';
+import Menu from './Components/Menu';
+import Favorites from './Components/Favorites';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [category, setCategory] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleCategoryClick = (category) => {
+    setCategory(category);
+    setSearchTerm("");
+  };
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    setCategory("");
+    setSearchTerm(event.target.search.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Menu handleCategoryClick={handleCategoryClick} handleSearch={handleSearch} />
+        <Routes>
+          <Route exact path="/" element={<Body category={category} searchTerm={searchTerm} />} />
+          <Route path="/article/:id" element={<ArticleDetail />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
