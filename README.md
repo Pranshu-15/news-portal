@@ -53,9 +53,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 🙏 Acknowledgments
 
-- [NewsAPI](https://newsapi.org/) for providing the news data
+- [NewsAPI](https://newsdata.io//) for providing the news data
 - [Unsplash](https://unsplash.com/) for the landing page image
 
 ---
 
-Made with ❤️ by [Pranshu Agrawal]
+Made with ❤️ by Pranshu Agrawal
