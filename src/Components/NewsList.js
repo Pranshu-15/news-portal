@@ -39,6 +39,9 @@ const NewsList = (props) => {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
+  if (!Array.isArray(newsData) || newsData.length === 0) {
+    return <div>API Limit Reached.</div>;
+  }
 
   const totalArticles = newsData.length;
   const totalPages = Math.ceil(totalArticles / pageSize);

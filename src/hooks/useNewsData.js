@@ -10,7 +10,7 @@ const useNewsData = (category, searchTerm) => {
     dispatch(fetchNewsData(category, searchTerm));
   }, [category, searchTerm, dispatch]);
 
-  return { newsData, loading, error };
+  return { newsData: Array.isArray(newsData) ? newsData : [], loading, error };
 };
 
 export default useNewsData;

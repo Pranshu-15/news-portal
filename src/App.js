@@ -23,6 +23,7 @@ const AppContent = () => {
     event.preventDefault();
     const searchTerm = event.target.search.value;
     navigate(`/news/?search=${searchTerm}`);
+    
   };
 
   

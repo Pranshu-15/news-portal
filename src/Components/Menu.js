@@ -14,6 +14,8 @@ const Menu = ({ handleCategoryClick, handleSearch }) => {
   const navRef = useRef(null);
   const searchRef = useRef(null);
 
+  
+
   useEffect(() => {
     const navItems = navRef.current.querySelectorAll('.nav-link, .dropdown');
     
