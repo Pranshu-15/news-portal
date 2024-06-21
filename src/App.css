@@ -19,7 +19,25 @@
       font-family: "Song Myung", serif;
     }
   }
+  .landing-page {
+    background-color: #f8f9fa;
+  }
   
+  .landing-page h1 {
+    color: #333;
+  }
+  
+  .landing-page p {
+    color: #666;
+  }
+  
+  .landing-page img {
+    max-width: 100%;
+    height: auto;
+  }
+  .landing-pg-img{
+    margin-top: -2rem;
+  }
 .news-list-container {
     display: flex;
     flex-direction: column;
@@ -304,12 +322,25 @@
     right: 0;
     width: 0;
    }
-   
   @media (max-width: 768px) {
     .pagination-container {
       position: relative;
       top: 56rem;
     }
+    .landing-page {
+        text-align: center;
+      }
+    
+      .landing-page h1 {
+        font-size: 2.5rem;
+      }
+    
+      .landing-page p {
+        font-size: 1rem;
+      }
+      .landing-pg-img{
+        margin-top: -20rem;
+      }
   }
   
   

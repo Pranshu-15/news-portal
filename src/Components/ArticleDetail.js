@@ -35,21 +35,7 @@ const ArticleDetail = () => {
     fontWeight: 'bolder',
     width: '100%',
   };
-  // const descriptionStyle = {
-  //   position: 'absolute',
-  //   top: '70%',
-  //   left: '50%',
-  //   transform: 'translate(-50%, -50%)',
-  //   color: 'black',
-  //   textAlign: 'center',
-  //   fontSize: '2rem',
-  //   fontWeight: 'bolder',
-  //   width: '100%',
-  // };
-
-  const contentStyle = {
-    padding: '1rem',
-  };
+  
 
   return (
     <>
