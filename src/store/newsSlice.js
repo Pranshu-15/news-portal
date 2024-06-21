@@ -44,7 +44,7 @@ export const { setNewsData, setLoading, setError, addFavorite, removeFavorite } 
 export const fetchNewsData = (category, searchTerm) => async (dispatch) => {
   dispatch(setLoading(true));
   try {
-    const apiKey = process.env.REACT_APP_GNEWS_API_KEY;
+    const apiKey = process.env.REACT_APP_NEWS_API_KEY;
     const apiUrl = `https://newsdata.io/api/1/latest?apikey=${apiKey}`;
     const categoryParam = category ? `&q=${category}` : '';
     const searchParam = searchTerm ? `&q=${searchTerm}` : '';
